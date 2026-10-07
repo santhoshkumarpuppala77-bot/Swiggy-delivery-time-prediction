@@ -37,7 +37,7 @@ if st.session_state.show_form:
 
     multiple_deliveries = st.sidebar.selectbox("Multiple Deliveries",df['multiple_deliveries'].unique())
 
-    festival = st.sidebar.selectbox("Is Festival",df["festival"].unique())
+    # festival = st.sidebar.selectbox("Is Festival",df["festival"].unique())
 
 
     st.sidebar.header("Order Details")
@@ -55,7 +55,7 @@ if st.session_state.show_form:
 
     st.sidebar.header("Location Details")
 
-    city_name = st.sidebar.selectbox("City Name",df["city_name"].unique())
+    # city_name = st.sidebar.selectbox("City Name",df["city_name"].unique())
 
     restaurant_latitude = st.sidebar.number_input("Restaurant Latitude",value=df["restaurant_latitude"].min(),format="%.6f")
 
@@ -69,9 +69,9 @@ if st.session_state.show_form:
 
     st.sidebar.header("Time Details")
 
-    order_time_of_day = st.sidebar.selectbox("Order Time of Day",df["order_time_of_day"].unique())
+    # order_time_of_day = st.sidebar.selectbox("Order Time of Day",df["order_time_of_day"].unique())
 
-    order_day_of_week = st.sidebar.selectbox("Order Day of Week",df["order_day_of_week"].unique())
+    # order_day_of_week = st.sidebar.selectbox("Order Day of Week",df["order_day_of_week"].unique())
 
     order_day = st.sidebar.number_input("Order Day",min_value=df["order_day"].min(),max_value=df["order_day"].max(),value=df["order_day"].min())
 
@@ -98,11 +98,11 @@ if st.session_state.show_form:
         'type_of_order': [type_of_order],
         'type_of_vehicle': [type_of_vehicle],
         'multiple_deliveries': [multiple_deliveries],
-        'festival' : [festival],
+        # 'festival' : [festival],
         'city_type': [city_type],
-        'city_name': [city_name],
-        'order_time_of_day': [order_time_of_day],
-        'order_day_of_week': [order_day_of_week],
+        # 'city_name': [city_name],
+        # 'order_time_of_day': [order_time_of_day],
+        # 'order_day_of_week': [order_day_of_week],
         'order_day': [order_day],
         'is_weekend': [is_weekend],
         'pickup_time_minutes': [pickup_time_minutes],
